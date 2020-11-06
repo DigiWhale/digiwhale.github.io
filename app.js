@@ -20,7 +20,7 @@ l.clear();
 
 setTimeout( function() {
 // modify this one line below, and see the result !
-var logoTitle = 'Andrew Humphrey';
+var logoTitle = 'Hello World!';
 var logoRandom = '';
 var logoTitleContainer = l.text(0, '50%', '');
 var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
@@ -89,4 +89,9 @@ tl.from(bgd, 0.02, {opacity:0, scale:0, transformOrigin: 'center center'})
 .fromTo(lampLine, 0.02, {opacity: 0},{opacity: 0.2, delay:0.1}, "a-=0.05")
 .to(lampLine, 0.01, {opacity: 1}, "b-=0.05")
 .to(lampLine, 0.01, {opacity: 0.5}, "c-=0.05");
-document.getElementById('console_text').textContent="Andrew_Humphrey@mac:~ $ Sudo Hire-Me.py"
+document.getElementById('console_text_1').textContent="Andrew_Humphrey@mac:~ $ sudo python hire_me.py"
+document.getElementById('console_text_2').textContent="Andrew_Humphrey@mac:~ $ npm install robotics"
+document.getElementById('console_text_3').textContent="Andrew_Humphrey@mac:~ $ node robotics"
+document.getElementById('console_text_4').textContent="Andrew_Humphrey@mac:~ $ ls -a grep|usb"
+document.getElementById('console_text_5').textContent="Andrew_Humphrey@mac:~ $ cat resume.txt"
+

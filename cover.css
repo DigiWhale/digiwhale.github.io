@@ -96,6 +96,39 @@ html, body {
   color: rgba(255, 255, 255, .5);
 }
 
-#console_text {
+#console_text_1, #console_text_2, #console_text_3, #console_text_4, #console_text_5 {
   font-size: xx-small;
+}
+
+#console_text_6 {
+  font-size: x-large;
+}
+
+.logo_container {
+  text-align:center;
+  padding: 3em 0;
+}
+
+.row_container {
+  display: flex;
+  justify-content: center;
+}
+
+.row_container > div {
+  margin:50px;
+}
+
+.logo_container_1 {
+  display: inline-block;
+  position: relative;
+  text-align:center;
+  padding: 3em 0;
+}
+
+.logo_container_1 > :first-child ~ * {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  bottom: 0;
+  left: 37%;
 }
