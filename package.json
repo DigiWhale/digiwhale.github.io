@@ -19,6 +19,7 @@
   "homepage": "https://github.com/DigiWhale/digiwhale.github.io#readme",
   "dependencies": {
     "bootstrap": "^4.5.3",
+    "gsap": "^3.5.1",
     "jquery": "^1.12.4",
     "popper.js": "^1.16.1",
     "snapsvg": "^0.5.1"

@@ -1,36 +1,21 @@
-/*
- * Globals
- */
 
-/* Links */
-a,
-a:focus,
-a:hover {
+a, a:focus, a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: .05rem solid #fff;
 }
 
-
-/*
- * Base structure
- */
-
-html,
-body {
+html, body {
   height: 100%;
   background-color: #333;
 }
 
-body {
+.card-body {
   display: -ms-flexbox;
   display: flex;
   color: #fff;
@@ -41,23 +26,20 @@ body {
 .cover-container {
   max-width: 60em;
 }
-#full_name {
-  left: 50%;
-  top: 50%;
-  /* position: absolute; */
-  /* transform: translate(-50%, -50%); */
+
+#svg {
+  margin-bottom: 10rem;
+  margin-top: -15rem;
 }
 
-
-/*
- * Header
- */
 .masthead {
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 0rem;
 }
 
 .masthead-brand {
-  margin-bottom: 0;
+  margin-top: 0rem;
+  padding:0;
 }
 
 .nav-masthead .nav-link {
@@ -91,28 +73,29 @@ body {
   }
 }
 
-
-/*
- * Cover
- */
 .cover {
   padding: 0 1.5rem;
 }
+
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: 700;
 }
 
-
-/*
- * Footer
- */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
 
-
 .card{
-  background-color: gray;
+  background-color: #333;
   margin: 1rem;
+}
+
+#terminal {
+  position: 0, 0;
+  color: rgba(255, 255, 255, .5);
+}
+
+#console_text {
+  font-size: xx-small;
 }
