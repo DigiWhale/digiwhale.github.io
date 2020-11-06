@@ -39,7 +39,13 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 60em;
+}
+#full_name {
+  left: 50%;
+  top: 50%;
+  /* position: absolute; */
+  /* transform: translate(-50%, -50%); */
 }
 
 
@@ -55,7 +61,7 @@ body {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: .1rem 0;
   font-weight: 700;
   color: rgba(255, 255, 255, .5);
   background-color: transparent;
@@ -103,4 +109,10 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+
+.card{
+  background-color: gray;
+  margin: 1rem;
 }
