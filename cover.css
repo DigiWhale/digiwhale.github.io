@@ -116,6 +116,7 @@ html, body {
 
 .row_container > div {
   margin:50px;
+  flex: 1 1 100%;
 }
 
 .logo_container_1 {
