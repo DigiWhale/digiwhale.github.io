@@ -1,13 +1,14 @@
 // const x = require("snapsvg")
-window.onload = play();
-document.getElementById('svg').addEventListener('click', () => { play() })
+window.onload = play("#logo");
+document.getElementById('svg').addEventListener('mouseover', () => { display_string = "Hands off the terminal buddy!" ;play("#logo") })
+document.getElementById('logo').addEventListener('click', () => { display_string = " ".repeat(display_string.length) ; play("#logo") })
+
+display_string = 'Welcome to my portfolio, feel free to take a look around. (Click to dismiss)'
 
 
-
-
-function play() {
+function play(element_id) {
 var blue = '#2980b9';
-var l = Snap("#logo");
+var l = Snap(element_id);
 // console.log(l)
 // var p = l.select('#line');
 l.clear();
@@ -19,13 +20,12 @@ l.clear();
 // });
 
 setTimeout( function() {
-// modify this one line below, and see the result !
-var logoTitle = 'Hello World!';
+var logoTitle = display_string;
 var logoRandom = '';
 var logoTitleContainer = l.text(0, '50%', '');
 var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
 logoTitleContainer.attr({
-fontSize: 280,
+fontSize: 30,
 fontFamily: 'Dosis',
 fontWeight: '600'
 });
