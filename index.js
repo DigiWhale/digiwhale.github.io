@@ -1,7 +1,12 @@
 // const x = require("snapsvg")
 window.onload = play("#logo");
-document.getElementById('svg').addEventListener('mouseover', () => { display_string = "Hands off the terminal buddy!" ;play("#logo") })
+document.getElementById('svg').addEventListener('click', () => { display_string = "Hands off the terminal buddy!" ;play("#logo") })
 document.getElementById('logo').addEventListener('click', () => { display_string = " ".repeat(display_string.length) ; play("#logo") })
+document.getElementById('first_icon').addEventListener('mouseenter', () => { display_string = " ~$ git checkout -b My GitHub Page" ; play("#button_description") })
+document.getElementById('second_icon').addEventListener('mouseenter', () => { display_string = " ~$ git checkout -b My LinkedIn Page" ; play("#button_description") })
+document.getElementById('third_icon').addEventListener('mouseenter', () => { display_string = " ~$ git checkout -b My Resume" ; play("#button_description") })
+document.getElementById('fourth_icon').addEventListener('mouseenter', () => { display_string = " ~$ git checkout -b My Youtube Page" ; play("#button_description") })
+document.getElementById('fifth_icon').addEventListener('mouseenter', () => { display_string = " ~$ git checkout -b My Projects" ; play("#button_description") })
 
 display_string = 'Welcome to my portfolio, feel free to take a look around. (Click to dismiss)'
 
@@ -9,16 +14,7 @@ display_string = 'Welcome to my portfolio, feel free to take a look around. (Cli
 function play(element_id) {
 var blue = '#2980b9';
 var l = Snap(element_id);
-// console.log(l)
-// var p = l.select('#line');
 l.clear();
-// l.append(p);
-
-// p.attr({
-// fill: blue,
-// stroke: '#0066CC',
-// });
-
 setTimeout( function() {
 var logoTitle = display_string;
 var logoRandom = '';
@@ -33,7 +29,7 @@ fontWeight: '600'
 function generateRandomTitle(i, logoRandom) {
 setTimeout( function() {
 logoTitleContainer.attr({ text: logoRandom });
-}, i*50 );
+}, i*20 );
 }
 
 for( var i=0; i < logoTitle.length+1; i++ ) {
