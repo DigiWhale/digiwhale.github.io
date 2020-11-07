@@ -91,3 +91,11 @@ document.getElementById('console_text_3').textContent="Andrew_Humphrey@mac:~ $ n
 document.getElementById('console_text_4').textContent="Andrew_Humphrey@mac:~ $ ls -a grep|usb"
 document.getElementById('console_text_5').textContent="Andrew_Humphrey@mac:~ $ cat resume.txt"
 
+$('.inner').terminal({
+  hello: function(what) {
+      this.echo('Hello, ' + what +
+                '. Wellcome to this terminal.');
+  }
+}, {
+  greetings: 'My First Terminal'
+});
