@@ -1,3 +1,6 @@
+x = function() {
+  document.getElementById('terminal').style.display='block'
+};
 function build_svg() {
   var tl = new TimelineMax();
   var bgd = $('#background rect');
@@ -40,13 +43,15 @@ function build_svg() {
   .to(lampLine, 0.01, {opacity: 1}, "b-=0.05")
   .to(lampLine, 0.01, {opacity: 0.5}, "c-=0.05");
 
-  document.getElementById('console_text_1').textContent="Andrew_Humphrey@mac:~ $ sudo python hire_me.py"
-  document.getElementById('console_text_2').textContent="Andrew_Humphrey@mac:~ $ npm install robotics"
-  document.getElementById('console_text_3').textContent="Andrew_Humphrey@mac:~ $ node robotics"
-  document.getElementById('console_text_4').textContent="Andrew_Humphrey@mac:~ $ ls -a grep|usb"
-  document.getElementById('console_text_5').textContent="Andrew_Humphrey@mac:~ $ cat resume.txt"
+  // document.getElementById('console_text_1').textContent="Andrew_Humphrey@mac:~ $ sudo python hire_me.py"
+
+  // document.getElementById('console_text_3').textContent="Andrew_Humphrey@mac:~ $ node robotics"
+  // document.getElementById('console_text_4').textContent="Andrew_Humphrey@mac:~ $ ls -a grep|usb"
+  // document.getElementById('console_text_5').textContent="Andrew_Humphrey@mac:~ $ cat resume.txt"
 }
 build_svg()
+
+
 
 // Terminal javascript
 var term;
@@ -55,10 +60,10 @@ $('#terminal').terminal({
       this.echo("No thanks!");
   },
   cat: function() {
-    this.echo($('<img src="https://placekitten.com/408/287">'));
+    this.echo($('<img src="https://placekitten.com/408/287" width=50px>'));
 }
 }, {
-  greetings: "Hi"
+  greetings: "[errno 13] permission denied\nEnter cat:."
 }
 );
 
@@ -87,3 +92,12 @@ function myFunction() {
 $(document).ready(function(){
   $(this).scrollTop(0);
 });
+
+var delay = 3000;
+setTimeout(
+    function()
+    {
+      x()
+    },
+    delay
+);
