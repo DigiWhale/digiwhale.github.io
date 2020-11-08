@@ -1,17 +1,29 @@
 
-/* a, a:focus, a:hover {
+a, a:focus, a:hover {
   color: #fff;
-} */
-* {
-  margin:0;
-  padding:0;
+}
+
+html {
+  height: 100%;
+}
+
+#junk {
+  text-align: center;
 }
 
 body {
   display: grid;
   height: 100%;
   width: 100%;
-  background-color: rgb(255, 254, 254);
+  background-color: white;
+}
+
+main {
+  background-color: white;
+}
+
+#about_me {
+  justify-content: center;
 }
 
 #console_text_1, #console_text_2, #console_text_3, #console_text_4, #console_text_5 {
@@ -34,10 +46,10 @@ body {
   bottom: 0;
   left: 43%;
 }
-
+/* 
 .links {
-  margin-top: 50px;
-}
+  margin-top: 80px;
+} */
 
 /* #button_description {
   padding: 0;
@@ -81,6 +93,28 @@ body {
   --animate-delay: 0.9s;
 }
 
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: white;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+#computer {
+  margin-bottom: 50px;
+}
+
+#terminal {
+  margin-bottom: 50px;
+}
 
 /* .btn-secondary, .btn-secondary:hover, .btn-secondary:focus {
   color: #333;
