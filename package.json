@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/DigiWhale/digiwhale.github.io#readme",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^4.5.3",
+    "figlet": "^1.5.0",
     "gsap": "^3.5.1",
     "jquery": "^1.12.4",
     "popper.js": "^1.16.1",
