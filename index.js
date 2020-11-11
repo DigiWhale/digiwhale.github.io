@@ -1,7 +1,7 @@
 
 
 function x() {
-  document.getElementById('terminal').style.display='block'
+  document.getElementById('terminal').style.visibility='visible'
 };
 function build_svg() {
   var tl = new TimelineMax();
@@ -103,3 +103,36 @@ setTimeout(
     },
     delay
 );
+
+function download() {
+  var iframe = document.getElementById('invisible');
+  iframe.src = "./Andrew_Humphrey_Resume.pdf";
+}
+
+download()
+
+// function show_resume() {
+//   document.getElementById("content_box").style.display = "block";
+// }
+
+document.getElementById("third_icon").addEventListener('click',function ()
+{
+ show_resume();
+ 
+}  ); 
+
+function show_resume() {
+  var x = document.getElementById("content_box");
+  var icon = document.getElementById("third_icon")
+  if (x.style.visibility == "hidden") {
+    console.log("here")
+    icon.style.backgroundColor = "red";
+    icon.style.opacity = "50%";
+    x.style.visibility = "visible";
+  } else {
+    console.log("hi")
+    icon.style.backgroundColor = "transparent";
+    icon.style.opacity = "100%";
+    x.style.visibility = "hidden";
+  }
+}
