@@ -1,3 +1,5 @@
+
+
 function x() {
   document.getElementById('terminal').style.display='block'
 };
@@ -57,13 +59,13 @@ build_svg()
 var term;
 $('#terminal').terminal({
   fuck: function() {
-      this.echo("no thanks");
+      this.echo("[[g;green;black]some text]");
   },
   cat: function() {
     this.echo($('<img src="https://placekitten.com/408/287" width=50px>'));
 }
 }, {
-  greetings: "[errno 13] permission denied\nEnter cat:"
+  greetings: "[[;blue;black]Welcome to my world.]"
 }
 );
 
