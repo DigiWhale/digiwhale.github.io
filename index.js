@@ -59,21 +59,21 @@ build_svg()
 var term;
 $('#terminal').terminal({
   hack: function() {
+    show_matrix();
     runMatrix();
   },
-  stopwhale: function() {
-    clearInterval(stop_whale);
+  reset: function() {
+    // clearInterval(stop_whale);
+    location.reload();
   },
   digiwhale: function() {
     whale.init();
   },
   help: function() {
-    this.echo("[[;green;black]- hack\n- cat\n- clear\n- digiwhale\n- stopWhale]");
+    this.echo("[[;green;black]- hack\n- cat\n- clear\n- digiwhale\n- reset]");
   },
   cat: function() {
-    this.echo($('<img src="https://placekitten.com/408/287" width=50px>'));
-    // clearInterval(stop_matrix)
-    
+    this.echo($('<img src="https://placekitten.com/408/287" width=200px>'));
 }
 }, {
   greetings: "[[;blue;black]Welcome to my world. Type help for list of commands.]"
@@ -157,6 +157,15 @@ function show_videos() {
     icon.style.opacity = "100%";
     youtubeVideos.style.visibility = "hidden";
     youtubeVideos.style.height = "0px";
+  }
+}
+
+function show_matrix() {
+  var canv = document.getElementById("canv");
+  if (canv.style.visibility == "hidden") {
+    canv.style.visibility = "visible";
+  } else {
+    canv.style.visibility = "hidden";
   }
 }
 
@@ -309,3 +318,4 @@ defs = '<defs><linearGradient gradientTransform="matrix(0 -2038 1116.5 0 -157 26
   return {init: init};
 })();
 
+show_matrix()
