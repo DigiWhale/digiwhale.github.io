@@ -122,6 +122,7 @@ document.getElementById("third_icon").addEventListener('click',function ()
 }  ); 
 
 function show_resume() {
+  var contentRow = document.getElementById("content_row");
   var x = document.getElementById("content_box");
   var icon = document.getElementById("third_icon")
   if (x.style.visibility == "hidden") {
@@ -129,10 +130,12 @@ function show_resume() {
     icon.style.backgroundColor = "red";
     icon.style.opacity = "50%";
     x.style.visibility = "visible";
+    contentRow.style.height = "1070px";
   } else {
     console.log("hi")
     icon.style.backgroundColor = "transparent";
     icon.style.opacity = "100%";
     x.style.visibility = "hidden";
+    contentRow.style.height = "0px";
   }
 }
