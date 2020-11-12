@@ -164,3 +164,7 @@ main {
   background-color: transparent;
   z-index: 1;
 }
+
+#canv {
+  background-color: transparent;
+}
