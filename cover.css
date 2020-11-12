@@ -103,7 +103,7 @@ main {
 
 #navbar {
   overflow: hidden;
-  background-color: white;
+  background-color: transparent;
   padding-top: 100px;
 }
 
@@ -168,3 +168,9 @@ main {
 #canv {
   background-color: transparent;
 }
+
+#whale {
+  height: 99.5%;
+  width: 100%;
+  position: fixed;
+  }
