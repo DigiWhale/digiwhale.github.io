@@ -74,26 +74,19 @@ document.documentElement.style.setProperty('--animate-duration', '10s');
 document.documentElement.style.setProperty('--animate-duration', '.5s');
 
 // When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
+window.onscroll = function() {stickyNavBar()};
 // Get the navbar
 var navbar = document.getElementById("navbar");
-
 // Get the offset position of the navbar
 var sticky = 30;
-
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function stickyNavBar() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
   }
 }
-
-// $(document).ready(function(){
-//   $(this).scrollTop(0);
-// });
 
 var delay = 3000;
 setTimeout(
@@ -105,20 +98,20 @@ setTimeout(
 );
 
 function download() {
-  var iframe = document.getElementById('invisible');
+  var iframe = document.getElementById('ahresume');
   iframe.src = "./Andrew_Humphrey_Resume.pdf";
 }
-
 download()
 
-// function show_resume() {
-//   document.getElementById("content_box").style.display = "block";
-// }
-
+// Mapping icons to their functions
 document.getElementById("third_icon").addEventListener('click',function ()
 {
  show_resume();
- 
+}  ); 
+
+document.getElementById("fourth_icon").addEventListener('click',function ()
+{
+ show_videos();
 }  ); 
 
 function show_resume() {
@@ -137,5 +130,21 @@ function show_resume() {
     icon.style.opacity = "100%";
     x.style.visibility = "hidden";
     contentRow.style.height = "0px";
+  }
+}
+
+function show_videos() {
+  var youtubeVideos = document.getElementById("youtube_videos");
+  var icon = document.getElementById("fourth_icon")
+  if (youtubeVideos.style.visibility == "hidden") {
+    icon.style.backgroundColor = "red";
+    icon.style.opacity = "50%";
+    youtubeVideos.style.visibility = "visible";
+    youtubeVideos.style.height = "1070px";
+  } else {
+    icon.style.backgroundColor = "transparent";
+    icon.style.opacity = "100%";
+    youtubeVideos.style.visibility = "hidden";
+    youtubeVideos.style.height = "0px";
   }
 }

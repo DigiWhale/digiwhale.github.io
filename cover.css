@@ -12,8 +12,17 @@ html {
   min-width: 800px;
 }
 
+#footer {
+  top: 100%;
+}
+
 #junk {
   text-align: center;
+}
+
+#youtube_videos {
+  visibility: hidden;
+  height: 0px;
 }
 
 body {
@@ -103,6 +112,13 @@ main {
 }
 
 #third_icon {
+  padding-top: 0px;
+  background-color: transparent;
+  border-radius: 30px;
+  opacity: 100%;
+}
+
+#fourth_icon {
   padding-top: 0px;
   background-color: transparent;
   border-radius: 30px;
