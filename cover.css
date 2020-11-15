@@ -35,7 +35,8 @@ body {
 }
 
 main {
-  background-color: white;
+  background-color: rgb(228, 220, 220);
+  height: 100%;
 }
 
 #about_me {
